@@ -8,19 +8,18 @@
     <h1>Fetching Data from a Text File</h1>
     <pre id="output"></pre>
 
-    // Start a block of Javascript code
-    ????A????
+    <script>
         // Fetch the content of the file data.txt 
-        fetch(????B????)
+        fetch('data.txt')
             .then(response => response.text())
             .then(data => {
                 // Display the content to the console
-                ????C????
+                console.log(data);
                 // Display content on the page in the HTML element with id output
-                ????D????.textContent = data; // Display content on the page
+                document.getElementById('output').textContent = data; // Display content on the page
             })
             .catch(error => console.error('Error reading file:', error));
-    // End a block of Javascript code
-    ????E????
+    // End a block of Javascript code>
+    </script>
 </body>
 </html>
